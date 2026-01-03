@@ -166,7 +166,7 @@
             background: #e0e0e0;
         }
 
-        .results-section {
+        .suggestions-section {
             background: white;
             padding: var(--space-24);
             border-radius: var(--radius-lg);
@@ -175,216 +175,65 @@
             overflow-y: auto;
         }
 
-        .results-section h2 {
+        .suggestions-section h2 {
             margin: 0 0 var(--space-16) 0;
             font-size: 1.3em;
             color: var(--color-teal-600);
         }
 
-        .hidden {
-            display: none;
-        }
-
-        .class-badge {
-            display: inline-block;
-            padding: var(--space-8) var(--space-16);
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.9em;
-            margin: var(--space-8) 0;
-        }
-
-        .class-a {
-            background: #d4edda;
-            color: #155724;
-        }
-
-        .class-b {
-            background: #cfe2ff;
-            color: #084298;
-        }
-
-        .class-c {
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .class-d {
-            background: #f8d7da;
-            color: #721c24;
-        }
-
-        .result-card {
-            background: #f8f9fa;
-            padding: var(--space-16);
-            border-left: 4px solid var(--color-teal-500);
-            margin-bottom: var(--space-16);
-            border-radius: var(--radius-base);
-        }
-
-        .result-card h3 {
-            margin: 0 0 var(--space-8) 0;
-            font-size: 1.1em;
-        }
-
-        .result-card p {
-            margin: var(--space-8) 0;
-            font-size: 0.95em;
-            line-height: 1.5;
-        }
-
-        .requirement-list {
-            background: white;
-            padding: var(--space-16);
-            border-radius: var(--radius-base);
-            margin-top: var(--space-16);
-        }
-
-        .requirement-list h4 {
-            margin: 0 0 var(--space-12) 0;
-            color: var(--color-teal-600);
-            font-size: 0.95em;
-        }
-
-        .requirement-list ul {
-            margin: 0;
-            padding-left: var(--space-20);
-        }
-
-        .requirement-list li {
-            margin-bottom: var(--space-8);
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
-
-        .no-results {
+        .separator-or {
             text-align: center;
-            padding: var(--space-32);
+            font-weight: bold;
+            font-size: 1.2em;
             color: var(--color-gray-400);
-        }
-
-        .tabs {
-            display: flex;
-            gap: var(--space-8);
-            margin-bottom: var(--space-16);
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        .tab-btn {
-            padding: var(--space-12) var(--space-16);
-            background: none;
-            border: none;
-            border-bottom: 3px solid transparent;
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--color-gray-400);
-            transition: all 0.3s;
-        }
-
-        .tab-btn.active {
-            color: var(--color-teal-600);
-            border-bottom-color: var(--color-teal-500);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .class-description {
-            background: #f0f9fa;
-            padding: var(--space-16);
-            border-radius: var(--radius-base);
-            margin-bottom: var(--space-16);
-        }
-
-        .device-categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-16);
-            margin-top: var(--space-16);
-        }
-
-        .category-card {
-            background: white;
-            padding: var(--space-16);
-            border-radius: var(--radius-base);
-            border: 1px solid #e0e0e0;
-        }
-
-        .category-card h5 {
-            margin: 0 0 var(--space-8) 0;
-            color: var(--color-teal-600);
-        }
-
-        .category-card p {
-            margin: var(--space-8) 0;
-            font-size: 0.85em;
-        }
-
-        @media (max-width: 900px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .autocomplete-wrapper {
+            margin: var(--space-16) 0;
             position: relative;
         }
 
-        #suggestions-list {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-top: none;
-            border-radius: 0 0 var(--radius-base) var(--radius-base);
-            max-height: 250px;
-            overflow-y: auto;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: none;
+        .separator-or::before,
+        .separator-or::after {
+            content: "";
+            display: inline-block;
+            width: 30%;
+            height: 1px;
+            background: #e0e0e0;
+            vertical-align: middle;
+            margin: 0 var(--space-12);
+        }
+
+        /* Suggestion List Styles for Column View */
+        #deviceList {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
         }
 
         .suggestion-item {
             padding: var(--space-12);
             cursor: pointer;
-            border-bottom: 1px solid #f0f0f0;
+            border: 1px solid #f0f0f0;
+            border-radius: var(--radius-base);
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .suggestion-item:last-child {
-            border-bottom: none;
+            background: #fcfcfc;
+            transition: all 0.2s;
         }
 
         .suggestion-item:hover {
-            background-color: var(--color-gray-200);
+            background-color: var(--color-teal-500);
+            color: white;
+            border-color: var(--color-teal-500);
+        }
+
+        .suggestion-item:hover .suggestion-class {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
         }
 
         .suggestion-name {
             font-weight: 500;
-            color: var(--color-slate-900);
-            display: block;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 80%;
-        }
-
-        .suggestion-class {
-            font-size: 0.85em;
-            color: var(--color-teal-600);
-            background: #f0f9fa;
-            padding: 2px 8px;
-            border-radius: 12px;
-            white-space: nowrap;
+            /* color: inherit; handled by hover */
         }
     </style>
 </head>
@@ -405,31 +254,16 @@
                     <div class="autocomplete-wrapper">
                         <input type="text" id="deviceName" autocomplete="off"
                             placeholder="E.g., CPAP machine, Blood glucose meter, CT scanner, HIV test kit">
-                        <div id="suggestions-list"></div>
+                        <!-- suggestions-list dropdown is removed, we use the right column now -->
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="deviceType">Device Type</label>
-                    <select id="deviceType">
-                        <option value="">-- Select Type --</option>
-                        <option value="ivd">In Vitro Diagnostic (IVD)</option>
-                        <option value="device">Medical Device</option>
-                        <option value="both">Not Sure</option>
-                    </select>
-                </div>
+                <div class="separator-or">OR</div>
 
                 <div class="form-group">
                     <label for="deviceFunction">Function / Intended Use</label>
                     <textarea id="deviceFunction"
                         placeholder="E.g., Monitor blood glucose levels non-invasively, Provide respiratory support for neonates, Detect pathogenic organisms"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="riskFactors">Risk Factors (Optional)</label>
-                    <textarea id="riskFactors"
-                        placeholder="E.g., Invasive, implantable, life-critical, single-use, connected to patient"
-                        rows="3"></textarea>
                 </div>
 
                 <div class="button-group">
@@ -438,12 +272,15 @@
                 </div>
             </div>
 
-            <div class="results-section">
-                <h2>Classification & Requirements</h2>
-                <div id="resultsContainer">
+            <div class="suggestions-section">
+                <h2>Search Results <span id="modelStatus"
+                        style="font-size:0.6em; color:var(--color-gray-400); font-weight:normal;">(Initializing
+                        AI...)</span></h2>
+                <p style="font-size: 0.85em; color: var(--color-gray-400); margin-top: -10px; margin-bottom: 15px;">
+                    Suggestions update automatically based on what you type.</p>
+                <div id="deviceList">
                     <div class="no-results">
-                        <p>Enter device information and click "Analyze Device" to see classification and requirements
-                        </p>
+                        <p>Type in "Device Name" or "Function" to see similar devices here.</p>
                     </div>
                 </div>
             </div>
@@ -451,478 +288,408 @@
 
         <div
             style="background: white; padding: var(--space-24); border-radius: var(--radius-lg); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
-            <h2 style="margin-top: 0; color: var(--color-teal-600);">Classification Guide</h2>
 
-            <div class="tabs">
-                <button class="tab-btn active" onclick="switchTab('classA')">Class A</button>
-                <button class="tab-btn" onclick="switchTab('classB')">Class B</button>
-                <button class="tab-btn" onclick="switchTab('classC')">Class C</button>
-                <button class="tab-btn" onclick="switchTab('classD')">Class D</button>
-            </div>
+            <!-- Analysis Results will be injected here -->
+            <div id="resultsContainer"></div>
 
-            <div id="classA" class="tab-content active">
-                <div class="class-description">
-                    <h3 style="margin-top: 0; color: var(--color-teal-600);">Class A - Low Risk</h3>
-                    <p><strong>Risk Level:</strong> Minimal potential harm to user</p>
-                    <p><strong>Regulatory Authority:</strong> State Licensing Authority (SLA)</p>
-                </div>
-                <div class="requirement-list">
-                    <h4>Medical Devices Examples:</h4>
-                    <ul>
-                        <li>Elastic bandages, examination gloves</li>
-                        <li>Thermometers (non-electronic)</li>
-                        <li>Absorbent cotton, surgical instruments</li>
-                        <li>Hot water bags, sphygmomanometer</li>
-                    </ul>
-                </div>
-                <div class="requirement-list">
-                    <h4>IVD Examples:</h4>
-                    <ul>
-                        <li>Laboratory reagents and solutions</li>
-                        <li>Non-specific laboratory testing materials</li>
-                    </ul>
-                </div>
-                <div class="requirement-list">
-                    <h4>Requirements:</h4>
-                    <ul>
-                        <li>Registration (for non-sterile, non-measuring devices)</li>
-                        <li>MD5 License (for sterile or measuring devices)</li>
-                        <li>Quality Management System (QMS) per ISO 13485:2016</li>
-                        <li>Device Master File (DMF)</li>
-                        <li>Exemption from clinical evaluation for most</li>
-                    </ul>
-                </div>
-            </div>
+            <h2 style="margin-top: var(--space-24); color: var(--color-teal-606);">Classification Guide</h2>
 
-            <div id="classB" class="tab-content">
-                <div class="class-description">
-                    <h3 style="margin-top: 0; color: var(--color-teal-600);">Class B - Low Moderate Risk</h3>
-                    <p><strong>Risk Level:</strong> Moderate potential harm; moderate controls needed</p>
-                    <p><strong>Regulatory Authority:</strong> State Licensing Authority (SLA)</p>
-                </div>
-                <div class="requirement-list">
-                    <h4>Medical Devices Examples:</h4>
-                    <ul>
-                        <li>Blood pressure monitoring devices</li>
-                        <li>Hypodermic needles, suction equipment</li>
-                        <li>Nebulizers, wheelchairs, catheters</li>
-                        <li>Extremity MRI systems</li>
-                    </ul>
-                </div>
-                <div class="requirement-list">
-                    <h4>IVD Examples:</h4>
-                    <ul>
-                        <li>Blood glucose test strips</li>
-                        <li>Pregnancy test kits</li>
-                        <li>Urine analysis test strips</li>
-                        <li>Self-testing devices (preliminary results)</li>
-                    </ul>
-                </div>
-                <div class="requirement-list">
-                    <h4>Requirements:</h4>
-                    <ul>
-                        <li>MD5 Manufacturing License or Import License</li>
-                        <li>Quality Management System (ISO 13485:2016)</li>
-                        <li>Risk analysis and risk management</li>
-                        <li>Technical documentation</li>
-                        <li>Clinical evaluation may be required</li>
-                        <li>State-level inspection by notified body</li>
-                    </ul>
-                </div>
-            </div>
+            <div id="classificationGuide" class="hidden" style="margin-top: var(--space-16);">
 
-            <div id="classC" class="tab-content">
-                <div class="class-description">
-                    <h3 style="margin-top: 0; color: var(--color-teal-606);">Class C - Moderate-High Risk</h3>
-                    <p><strong>Risk Level:</strong> Significant potential harm; strict controls required</p>
-                    <p><strong>Regulatory Authority:</strong> Central Licensing Authority (CDSCO)</p>
-                </div>
-                <div class="requirement-list">
-                    <h4>Medical Devices Examples:</h4>
-                    <ul>
-                        <li>Infusion pumps, X-ray machines</li>
-                        <li>MRI machines, CT scanners</li>
-                        <li>Bone plates, powered wheelchairs</li>
-                        <li>Cardiovascular imaging systems</li>
-                    </ul>
-                </div>
-                <div class="requirement-list">
-                    <h4>IVD Examples:</h4>
-                    <ul>
-                        <li>Hepatitis testing kits</li>
-                        <li>HIV testing kits</li>
-                        <li>Cancer diagnostic kits</li>
-                        <li>Coagulation parameter test kits</li>
-                    </ul>
-                </div>
-                <div class="requirement-list">
-                    <h4>Requirements:</h4>
-                    <ul>
-                        <li>MD5 or MD9 License from CDSCO</li>
-                        <li>Quality Management System (ISO 13485:2016)</li>
-                        <li>Clinical Evaluation Report (CER)</li>
-                        <li>Performance Evaluation Report (for IVDs)</li>
-                        <li>Comprehensive risk analysis and management</li>
-                        <li>CDSCO technical review and approval</li>
-                        <li>CDSCO inspection required</li>
-                    </ul>
-                </div>
-            </div>
+                <div id="classA" class="tab-content hidden">
+                    <div class="class-description">
+                        <h3 style="margin-top: 0; color: var(--color-teal-600);">Class A - Low Risk</h3>
+                        <p><strong>Risk Level:</strong> Minimal potential harm to user</p>
+                        <p><strong>Regulatory Authority:</strong> State Licensing Authority (SLA)</p>
+                    </div>
 
-            <div id="classD" class="tab-content">
-                <div class="class-description">
-                    <h3 style="margin-top: 0; color: var(--color-teal-606);">Class D - High Risk</h3>
-                    <p><strong>Risk Level:</strong> Highest potential harm; strictest controls</p>
-                    <p><strong>Regulatory Authority:</strong> Central Licensing Authority (CDSCO)</p>
+                    <div class="requirement-list">
+                        <h4>Detailed Requirements:</h4>
+                        <ul>
+                            <li><strong>License:</strong> Registration Number (for non-sterile / non-measuring) or MD5
+                                License (for sterile / measuring).</li>
+                            <li><strong>QMS:</strong> ISO 13485:2016 is voluntary but highly recommended for export and
+                                future-proofing.</li>
+                            <li><strong>Clinical Data:</strong> Generally exempt from Clinical Performance Evaluation,
+                                unless specified.</li>
+                            <li><strong>Device Master File (DMF):</strong> Basic technical file required.</li>
+                            <li><strong>Import:</strong> MD-14 Form required for authorized agents importing Class A
+                                devices.</li>
+                            <li><strong>Labeling:</strong> Must comply with CDSCO labeling standards (Rule 6).</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="requirement-list">
-                    <h4>Medical Devices Examples:</h4>
-                    <ul>
-                        <li>Heart valves, implantable pacemakers</li>
-                        <li>Implantable defibrillators</li>
-                        <li>Artificial joints, intravascular devices</li>
-                        <li>Active implantable medical devices</li>
-                    </ul>
+
+                <div id="classB" class="tab-content hidden">
+                    <div class="class-description">
+                        <h3 style="margin-top: 0; color: var(--color-teal-600);">Class B - Low Moderate Risk</h3>
+                        <p><strong>Risk Level:</strong> Moderate potential harm; moderate controls needed</p>
+                        <p><strong>Regulatory Authority:</strong> State Licensing Authority (SLA)</p>
+                    </div>
+
+                    <div class="requirement-list">
+                        <h4>Detailed Requirements:</h4>
+                        <ul>
+                            <li><strong>License:</strong> MD5 (Manufacturing) or MD15 (Import) License required.</li>
+                            <li><strong>QMS:</strong> Mandatory compliance with ISO 13485:2016 (MDR 2017 Fifth
+                                Schedule).</li>
+                            <li><strong>Audit:</strong> Site audit by Notified Body (registered with CDSCO) required
+                                prior to grant of license.</li>
+                            <li><strong>Clinical Data:</strong> Clinical Investigation generally not required for
+                                predicate devices; Clinical Performance Evaluation may be needed.</li>
+                            <li><strong>Device Master File (DMF):</strong> Full Plant Master File (PMF) and Device
+                                Master File required.</li>
+                            <li><strong>Testing:</strong> Test license (MD-12) required for testing/analysis purposes if
+                                not yet licensed.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="requirement-list">
-                    <h4>IVD Examples:</h4>
-                    <ul>
-                        <li>Companion diagnostics</li>
-                        <li>Genetic testing kits</li>
-                        <li>Blood compatibility testing for transplantation</li>
-                        <li>Transmissible agent detection (organ transplant)</li>
-                    </ul>
+
+                <div id="classC" class="tab-content hidden">
+                    <div class="class-description">
+                        <h3 style="margin-top: 0; color: var(--color-teal-606);">Class C - Moderate-High Risk</h3>
+                        <p><strong>Risk Level:</strong> Significant potential harm; strict controls required</p>
+                        <p><strong>Regulatory Authority:</strong> Central Licensing Authority (CDSCO)</p>
+                    </div>
+
+                    <div class="requirement-list">
+                        <h4>Detailed Requirements:</h4>
+                        <ul>
+                            <li><strong>Authority:</strong> Central Drugs Standard Control Organization (CDSCO) - CLA.
+                            </li>
+                            <li><strong>License:</strong> MD9 (Manufacturing Loan) / MD5 or MD15 (Import).</li>
+                            <li><strong>QMS:</strong> Strict adherence to ISO 13485:2016 and MDR 2017 Fifth Schedule.
+                            </li>
+                            <li><strong>Audit:</strong> Mandatory inspection by Central Drug Inspector + State Drug
+                                Inspector.</li>
+                            <li><strong>Clinical Data:</strong> Clinical Investigation (Phase III) or robust Clinical
+                                Evaluation Report (CER) usually required.</li>
+                            <li><strong>Review:</strong> Subject to Subject Expert Committee (SEC) review for safety and
+                                efficacy.</li>
+                            <li><strong>Post-Market:</strong> Periodic Safety Update Reports (PSUR) may be required.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="requirement-list">
-                    <h4>Requirements:</h4>
-                    <ul>
-                        <li>MD5 or MD9 License from CDSCO only</li>
-                        <li>Quality Management System (ISO 13485:2016)</li>
-                        <li>Comprehensive Clinical Evaluation Report (CER)</li>
-                        <li>Clinical Investigation data in many cases</li>
-                        <li>Detailed risk analysis and management</li>
-                        <li>Biocompatibility testing (if applicable)</li>
-                        <li>Rigorous CDSCO technical review</li>
-                        <li>CDSCO inspection and site audit</li>
-                        <li>Mandatory post-market surveillance plan</li>
-                    </ul>
+
+                <div id="classD" class="tab-content hidden">
+                    <div class="class-description">
+                        <h3 style="margin-top: 0; color: var(--color-teal-606);">Class D - High Risk</h3>
+                        <p><strong>Risk Level:</strong> Highest potential harm; strictest controls</p>
+                        <p><strong>Regulatory Authority:</strong> Central Licensing Authority (CDSCO)</p>
+                    </div>
+
+                    <div class="requirement-list">
+                        <h4>Detailed Requirements:</h4>
+                        <ul>
+                            <li><strong>Authority:</strong> Central Licensing Authority (CLA) - CDSCO HQ.</li>
+                            <li><strong>License:</strong> Stringent approval process for Manufacture (MD9) or Import
+                                (MD15).</li>
+                            <li><strong>QMS:</strong> Full Quality Assurance System per ISO 13485.</li>
+                            <li><strong>Clinical Data:</strong> Mandatory Clinical Investigation (Pilot + Pivotal) for
+                                new devices. Post-Marketing Clinical Follow-up (PMCF) often required.</li>
+                            <li><strong>Audit:</strong> Joint inspection by Central and State regulators with expert
+                                evaluation.</li>
+                            <li><strong>Safety:</strong> Strict Biocompatibility, Sterility, and Electrical Safety (IEC
+                                60601) validation.</li>
+                            <li><strong>Post-Market:</strong> Mandatory Post-Market Surveillance (PMS) and vigilance
+                                reporting.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="device_data.js"></script>
-    <script>
-        const deviceDatabase = {
-            // Medical Devices
-            'cpap': { class: 'B', type: 'Respiratory Support Device', ivd: false },
-            'cpap machine': { class: 'B', type: 'Respiratory Support Device', ivd: false },
-            'respiratory device': { class: 'B', type: 'Medical Device', ivd: false },
-            'neonatalneonatal': { class: 'C', type: 'Life-Critical Device', ivd: false },
-            'ventilator': { class: 'C', type: 'Life Support', ivd: false },
-            'infusion pump': { class: 'C', type: 'Drug Delivery', ivd: false },
-            'x-ray': { class: 'C', type: 'Diagnostic Imaging', ivd: false },
-            'ct scanner': { class: 'C', type: 'Diagnostic Imaging', ivd: false },
-            'mri': { class: 'C', type: 'Diagnostic Imaging', ivd: false },
-            'ultrasound': { class: 'B', type: 'Diagnostic Imaging', ivd: false },
-            'ecg': { class: 'B', type: 'Cardiac Monitoring', ivd: false },
-            'pacemaker': { class: 'D', type: 'Implantable Device', ivd: false },
-            'heart valve': { class: 'D', type: 'Implantable Device', ivd: false },
-            'artificial joint': { class: 'D', type: 'Implantable Device', ivd: false },
-            'thermometer': { class: 'A', type: 'Temperature Monitoring', ivd: false },
-            'blood pressure': { class: 'B', type: 'Vital Sign Monitoring', ivd: false },
-            'glucometer': { class: 'B', type: 'Blood Glucose Monitoring', ivd: false },
-            'glucose meter': { class: 'B', type: 'Blood Glucose Monitoring', ivd: false },
-            'wheelchair': { class: 'B', type: 'Mobility Device', ivd: false },
-            'elastic bandage': { class: 'A', type: 'Support Device', ivd: false },
-            'gloves': { class: 'A', type: 'Personal Protection', ivd: false },
-            'catheter': { class: 'B', type: 'Vascular Access', ivd: false },
-            'needle': { class: 'B', type: 'Injection Device', ivd: false },
-            'stent': { class: 'C', type: 'Cardiovascular Implant', ivd: false },
-            'surgical instrument': { class: 'A', type: 'Surgical Tool', ivd: false },
-            'bone plate': { class: 'C', type: 'Orthopedic Implant', ivd: false },
-            'implant': { class: 'D', type: 'Implantable Device', ivd: false },
-            'nebulizer': { class: 'B', type: 'Drug Delivery', ivd: false },
-            'inhaler': { class: 'B', type: 'Drug Delivery', ivd: false },
-            'pump': { class: 'C', type: 'Drug Delivery', ivd: false },
+        <script src="device_data_embedded.js"></script>
+        <script type="module">
+            import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.14.0';
 
-            // IVDs
-            'hiv test': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
-            'hiv kit': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
-            'hepatitis': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
-            'covid': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
-            'pregnancy test': { class: 'B', type: 'Pregnancy Diagnosis', ivd: true },
-            'glucose test strip': { class: 'B', type: 'Metabolic Monitoring', ivd: true },
-            'urine test': { class: 'B', type: 'Urinalysis', ivd: true },
-            'blood test': { class: 'C', type: 'Hematology', ivd: true },
-            'cancer marker': { class: 'C', type: 'Oncology Diagnostic', ivd: true },
-            'genetic test': { class: 'D', type: 'Genetic Diagnosis', ivd: true },
-            'blood group': { class: 'D', type: 'Blood Banking', ivd: true },
-            'reagent': { class: 'A', type: 'Laboratory Reagent', ivd: true },
-            'solution': { class: 'A', type: 'Laboratory Solution', ivd: true },
-            'antibody test': { class: 'C', type: 'Immunological', ivd: true },
-            'antigen test': { class: 'C', type: 'Immunological', ivd: true },
-            'malaria test': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
-            'dengue test': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
-            'tuberculosis': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
-            'syphilis test': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
-            'cardiac marker': { class: 'B', type: 'Cardiac Diagnosis', ivd: true },
-            'troponin test': { class: 'C', type: 'Cardiac Diagnosis', ivd: true },
-        };
+            // Allow local models? No, using CDN for model weights too to start, 
+            // but plan said precompute. Actually, transformers.js running in browser NEEDS the model weights.
+            // It will download them to cache.
+            env.allowLocalModels = false;
+            env.useBrowserCache = true;
 
-        const classRequirements = {
-            'A': {
-                authority: 'State Licensing Authority (SLA)',
-                license: 'Registration (non-sterile/non-measuring) or MD5 License (sterile/measuring)',
-                qms: 'ISO 13485:2016 recommended',
-                clinical: 'Not typically required',
-                timeframe: '3-6 months',
-                documentation: ['Device Master File (DMF)', 'Technical Specification', 'QMS Documentation']
-            },
-            'B': {
-                authority: 'State Licensing Authority (SLA)',
-                license: 'MD5 Manufacturing or Import License',
-                qms: 'ISO 13485:2016 mandatory',
-                clinical: 'May be required',
-                timeframe: '6-9 months',
-                documentation: ['Device Master File (DMF)', 'Risk Analysis & Management', 'Clinical Evaluation', 'QMS Certificate', 'Technical Documentation']
-            },
-            'C': {
-                authority: 'Central Licensing Authority (CDSCO)',
-                license: 'MD5 (Manufacturing) or MD9 (Import) from CDSCO',
-                qms: 'ISO 13485:2016 mandatory',
-                clinical: 'Clinical Evaluation Report (CER) required',
-                timeframe: '9-15 months',
-                documentation: ['Device Master File (DMF)', 'Clinical Evaluation Report', 'Performance Evaluation (IVDs)', 'Risk Management Report', 'ISO 13485 Certificate', 'Free Sale Certificate (imports)', 'Biocompatibility Data']
-            },
-            'D': {
-                authority: 'Central Licensing Authority (CDSCO)',
-                license: 'MD5 (Manufacturing) or MD9 (Import) from CDSCO only',
-                qms: 'ISO 13485:2016 mandatory',
-                clinical: 'Comprehensive Clinical Investigation Data required',
-                timeframe: '12-24+ months',
-                documentation: ['Device Master File (DMF)', 'Comprehensive CER', 'Clinical Investigation Data', 'Biocompatibility & Sterilization', 'Risk Management Report', 'ISO 13485 Certificate', 'Free Sale Certificate', 'Post-Market Surveillance Plan', 'Regulatory History']
-            }
-        };
+            const deviceDatabase = {
+                // Medical Devices
+                'cpap': { class: 'B', type: 'Respiratory Support Device', ivd: false },
+                'cpap machine': { class: 'B', type: 'Respiratory Support Device', ivd: false },
+                'respiratory device': { class: 'B', type: 'Medical Device', ivd: false },
+                'neonatalneonatal': { class: 'C', type: 'Life-Critical Device', ivd: false },
+                'ventilator': { class: 'C', type: 'Life Support', ivd: false },
+                'infusion pump': { class: 'C', type: 'Drug Delivery', ivd: false },
+                'x-ray': { class: 'C', type: 'Diagnostic Imaging', ivd: false },
+                'ct scanner': { class: 'C', type: 'Diagnostic Imaging', ivd: false },
+                'mri': { class: 'C', type: 'Diagnostic Imaging', ivd: false },
+                'ultrasound': { class: 'B', type: 'Diagnostic Imaging', ivd: false },
+                'ecg': { class: 'B', type: 'Cardiac Monitoring', ivd: false },
+                'pacemaker': { class: 'D', type: 'Implantable Device', ivd: false },
+                'heart valve': { class: 'D', type: 'Implantable Device', ivd: false },
+                'artificial joint': { class: 'D', type: 'Implantable Device', ivd: false },
+                'thermometer': { class: 'A', type: 'Temperature Monitoring', ivd: false },
+                'blood pressure': { class: 'B', type: 'Vital Sign Monitoring', ivd: false },
+                'glucometer': { class: 'B', type: 'Blood Glucose Monitoring', ivd: false },
+                'glucose meter': { class: 'B', type: 'Blood Glucose Monitoring', ivd: false },
+                'wheelchair': { class: 'B', type: 'Mobility Device', ivd: false },
+                'elastic bandage': { class: 'A', type: 'Support Device', ivd: false },
+                'gloves': { class: 'A', type: 'Personal Protection', ivd: false },
+                'catheter': { class: 'B', type: 'Vascular Access', ivd: false },
+                'needle': { class: 'B', type: 'Injection Device', ivd: false },
+                'stent': { class: 'C', type: 'Cardiovascular Implant', ivd: false },
+                'surgical instrument': { class: 'A', type: 'Surgical Tool', ivd: false },
+                'bone plate': { class: 'C', type: 'Orthopedic Implant', ivd: false },
+                'implant': { class: 'D', type: 'Implantable Device', ivd: false },
+                'nebulizer': { class: 'B', type: 'Drug Delivery', ivd: false },
+                'inhaler': { class: 'B', type: 'Drug Delivery', ivd: false },
+                'pump': { class: 'C', type: 'Drug Delivery', ivd: false },
 
-        function analyzeDevice() {
-            const deviceName = document.getElementById('deviceName').value.toLowerCase().trim();
-            const deviceType = document.getElementById('deviceType').value;
-            const deviceFunction = document.getElementById('deviceFunction').value;
-            const riskFactors = document.getElementById('riskFactors').value;
+                // IVDs
+                'hiv test': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
+                'hiv kit': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
+                'hepatitis': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
+                'covid': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
+                'pregnancy test': { class: 'B', type: 'Pregnancy Diagnosis', ivd: true },
+                'glucose test strip': { class: 'B', type: 'Metabolic Monitoring', ivd: true },
+                'urine test': { class: 'B', type: 'Urinalysis', ivd: true },
+                'blood test': { class: 'C', type: 'Hematology', ivd: true },
+                'cancer marker': { class: 'C', type: 'Oncology Diagnostic', ivd: true },
+                'genetic test': { class: 'D', type: 'Genetic Diagnosis', ivd: true },
+                'blood group': { class: 'D', type: 'Blood Banking', ivd: true },
+                'reagent': { class: 'A', type: 'Laboratory Reagent', ivd: true },
+                'solution': { class: 'A', type: 'Laboratory Solution', ivd: true },
+                'antibody test': { class: 'C', type: 'Immunological', ivd: true },
+                'antigen test': { class: 'C', type: 'Immunological', ivd: true },
+                'malaria test': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
+                'dengue test': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
+                'tuberculosis': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
+                'syphilis test': { class: 'C', type: 'Infectious Disease Diagnostic', ivd: true },
+                'cardiac marker': { class: 'B', type: 'Cardiac Diagnosis', ivd: true },
+                'troponin test': { class: 'C', type: 'Cardiac Diagnosis', ivd: true },
+            };
 
-            if (!deviceName && !deviceFunction) {
-                alert('Please enter device name or function');
-                return;
-            }
-
-            let result = null;
-            let matchedKey = '';
-
-            // Search in database (Hardcoded Keywords first)
-            for (const key in deviceDatabase) {
-                if (deviceName.includes(key) || (deviceFunction && deviceFunction.toLowerCase().includes(key))) {
-                    result = deviceDatabase[key];
-                    matchedKey = key;
-                    break;
+            const classRequirements = {
+                'A': {
+                    authority: 'State Licensing Authority (SLA)',
+                    license: 'Registration (non-sterile/non-measuring) or MD5 License (sterile/measuring)',
+                    qms: 'ISO 13485:2016 recommended',
+                    clinical: 'Not typically required',
+                    timeframe: '3-6 months',
+                    documentation: ['Device Master File (DMF)', 'Technical Specification', 'QMS Documentation']
+                },
+                'B': {
+                    authority: 'State Licensing Authority (SLA)',
+                    license: 'MD5 Manufacturing or Import License',
+                    qms: 'ISO 13485:2016 mandatory',
+                    clinical: 'May be required',
+                    timeframe: '6-9 months',
+                    documentation: ['Device Master File (DMF)', 'Risk Analysis & Management', 'Clinical Evaluation', 'QMS Certificate', 'Technical Documentation']
+                },
+                'C': {
+                    authority: 'Central Licensing Authority (CDSCO)',
+                    license: 'MD5 (Manufacturing) or MD9 (Import) from CDSCO',
+                    qms: 'ISO 13485:2016 mandatory',
+                    clinical: 'Clinical Evaluation Report (CER) required',
+                    timeframe: '9-15 months',
+                    documentation: ['Device Master File (DMF)', 'Clinical Evaluation Report', 'Performance Evaluation (IVDs)', 'Risk Management Report', 'ISO 13485 Certificate', 'Free Sale Certificate (imports)', 'Biocompatibility Data']
+                },
+                'D': {
+                    authority: 'Central Licensing Authority (CDSCO)',
+                    license: 'MD5 (Manufacturing) or MD9 (Import) from CDSCO only',
+                    qms: 'ISO 13485:2016 mandatory',
+                    clinical: 'Comprehensive Clinical Investigation Data required',
+                    timeframe: '12-24+ months',
+                    documentation: ['Device Master File (DMF)', 'Comprehensive CER', 'Clinical Investigation Data', 'Biocompatibility & Sterilization', 'Risk Management Report', 'ISO 13485 Certificate', 'Free Sale Certificate', 'Post-Market Surveillance Plan', 'Regulatory History']
                 }
-            }
+            };
 
-            // Search in Extracted Database (if available)
-            if (!result && typeof extractedDeviceDatabase !== 'undefined') {
-                // normalize user input
-                const query = deviceName;
+            function analyzeDevice() {
+                const deviceName = document.getElementById('deviceName').value.toLowerCase().trim();
+                // deviceType is removed
+                const deviceFunction = document.getElementById('deviceFunction').value;
 
-                // We want to find if USER INPUT matches a DEVICE NAME in database.
-                // 1. User says "Abbott HIV" -> matches "Abbott RealTime HIV-1" (partial match?)
-                //    Actually "Abbott RealTime HIV-1" includes "Abbott HIV"? No.
-                //    But "Abbott RealTime HIV-1" includes "HIV"? Yes.
-                //    "Abbott RealTime HIV-1" includes "Abbott"? Yes.
-                // Tactic: Check if DB Item Name includes User Query.
+                if (!deviceName && !deviceFunction) {
+                    alert('Please enter device name or function');
+                    return;
+                }
 
-                for (const key in extractedDeviceDatabase) {
-                    if (key.includes(query) || (deviceFunction && key.includes(deviceFunction.toLowerCase()))) {
-                        result = extractedDeviceDatabase[key];
-                        matchedKey = result.originalName;
+                let result = null;
+                let matchedKey = '';
+
+                // Search in database (Hardcoded Keywords first)
+                for (const key in deviceDatabase) {
+                    if (deviceName.includes(key) || (deviceFunction && deviceFunction.toLowerCase().includes(key))) {
+                        result = deviceDatabase[key];
+                        matchedKey = key;
                         break;
                     }
                 }
 
-                // Tactic 2: Check if User Query includes DB Item Name (for exact product matches)
-                if (!result) {
+                // Search in Extracted Database (if available)
+                if (!result && typeof extractedDeviceDatabase !== 'undefined') {
+                    const query = deviceName;
                     for (const key in extractedDeviceDatabase) {
-                        if (query.includes(key) && key.length > 4) { // avoid short matches
+                        if (key.includes(query) || (deviceFunction && key.includes(deviceFunction.toLowerCase()))) {
                             result = extractedDeviceDatabase[key];
                             matchedKey = result.originalName;
                             break;
                         }
                     }
+                    if (!result) {
+                        for (const key in extractedDeviceDatabase) {
+                            if (query.includes(key) && key.length > 4) {
+                                result = extractedDeviceDatabase[key];
+                                matchedKey = result.originalName;
+                                break;
+                            }
+                        }
+                    }
                 }
+
+                // Smart classification if not found
+                if (!result) {
+                    result = classifyByKeywords(deviceName, deviceFunction, '');
+                }
+
+                displayResults(result, deviceName, matchedKey);
             }
 
-            // Smart classification if not found
-            if (!result) {
-                result = classifyByKeywords(deviceName, deviceFunction, riskFactors, deviceType);
+            function classifyByKeywords(name, func, risks) {
+                const text = (name + ' ' + func + ' ' + risks).toLowerCase();
+
+                // High risk indicators
+                if (text.match(/implant|pacemaker|valve|defibrillator|genetic|companion diagnostic|transmissible|transfusion|organ/i)) {
+                    return { class: 'D', type: 'High Risk Implant/Diagnostic', ivd: text.includes('test') || text.includes('diagnostic') };
+                }
+
+                // Moderate-high risk
+                if (text.match(/mri|ct|x-ray|pump|infusion|imaging|stent|bone plate|life-critical|life-threatening|hiv|hepatitis|cancer|troponin/i)) {
+                    return { class: 'C', type: 'Moderate-High Risk Device', ivd: text.includes('test') || text.includes('kit') };
+                }
+
+                // Low-moderate risk
+                if (text.match(/monitor|measure|glucose|pregnancy|blood pressure|ultrasound|ecg|needle|catheter|nebulizer|inhaler|urine|antibody|antigen|cardiac marker/i)) {
+                    return { class: 'B', type: 'Low-Moderate Risk Device', ivd: text.includes('test') || text.includes('kit') };
+                }
+
+                // Low risk (default)
+                return { class: 'A', type: 'Low Risk Device', ivd: false };
             }
 
-            displayResults(result, deviceName, matchedKey);
-        }
+            function displayResults(result, deviceName, matchedKey) {
+                const container = document.getElementById('resultsContainer');
+                const reqs = classRequirements[result.class];
 
-        function classifyByKeywords(name, func, risks, type) {
-            const text = (name + ' ' + func + ' ' + risks).toLowerCase();
-
-            // High risk indicators
-            if (text.match(/implant|pacemaker|valve|defibrillator|genetic|companion diagnostic|transmissible|transfusion|organ/i)) {
-                return { class: 'D', type: 'High Risk Implant/Diagnostic', ivd: text.includes('test') || text.includes('diagnostic') };
-            }
-
-            // Moderate-high risk
-            if (text.match(/mri|ct|x-ray|pump|infusion|imaging|stent|bone plate|life-critical|life-threatening|hiv|hepatitis|cancer|troponin/i)) {
-                return { class: 'C', type: 'Moderate-High Risk Device', ivd: text.includes('test') || text.includes('kit') };
-            }
-
-            // Low-moderate risk
-            if (text.match(/monitor|measure|glucose|pregnancy|blood pressure|ultrasound|ecg|needle|catheter|nebulizer|inhaler|urine|antibody|antigen|cardiac marker/i)) {
-                return { class: 'B', type: 'Low-Moderate Risk Device', ivd: text.includes('test') || text.includes('kit') };
-            }
-
-            // Low risk (default)
-            return { class: 'A', type: 'Low Risk Device', ivd: false };
-        }
-
-        function displayResults(result, deviceName, matchedKey) {
-            const container = document.getElementById('resultsContainer');
-            const reqs = classRequirements[result.class];
-
-            let html = `
+                let html = `
                 <div class="result-card">
-                    <h3>Classification Result</h3>
-                    <p><strong>Device:</strong> ${deviceName || 'User-described device'}</p>
+                    <h3 style="color: var(--color-teal-600);">Analysis Result</h3>
+                    <p><strong>Device:</strong> ${matchedKey || deviceName || 'User-described device'}</p>
                     <p><strong>Type:</strong> ${result.type}</p>
                     <p><strong>Category:</strong> ${result.ivd ? 'In Vitro Diagnostic (IVD)' : 'Medical Device'}</p>
                     <span class="class-badge class-${result.class.toLowerCase()}">CDSCO Class ${result.class}</span>
-                </div>
-
-                <div class="result-card">
-                    <h3>Regulatory Authority & Licensing</h3>
-                    <p><strong>Authority:</strong> ${reqs.authority}</p>
-                    <p><strong>License Type:</strong> ${reqs.license}</p>
-                    <p><strong>Estimated Timeframe:</strong> ${reqs.timeframe}</p>
-                </div>
-
-                <div class="result-card">
-                    <h3>Compliance Requirements</h3>
-                    <p><strong>Quality Management System:</strong> ${reqs.qms}</p>
-                    <p><strong>Clinical Evaluation:</strong> ${reqs.clinical}</p>
                     
-                    <div class="requirement-list">
-                        <h4>Required Documentation:</h4>
-                        <ul>
-                            ${reqs.documentation.map(doc => `<li>${doc}</li>`).join('')}
-                        </ul>
+                    <div style="margin-top: var(--space-16); padding-top: var(--space-16); border-top: 1px solid #e0e0e0;">
+                        <p><strong>Regulatory Authority:</strong> ${reqs.authority}</p>
+                        <p><strong>License Type:</strong> ${reqs.license}</p>
+                        <p><strong>Estimated Timeframe:</strong> ${reqs.timeframe}</p>
                     </div>
                 </div>
-
-                <div class="result-card">
-                    <h3>Key Next Steps</h3>
-                    <ol style="margin: 0; padding-left: 20px;">
-                        <li>Register on CDSCO Sugam portal (cdscomdonline.gov.in)</li>
-                        <li>Prepare Device Master File (DMF)</li>
-                        <li>Ensure ISO 13485:2016 QMS compliance</li>
-                        <li>${result.class === 'A' ? 'Submit registration for SLA approval' :
-                    result.class === 'B' ? 'Apply for MD5 License to SLA' :
-                        'Apply for MD5/MD9 License to CDSCO with clinical data'}</li>
-                        <li>Undergo inspection by ${result.class <= 'B' ? 'notified body / SLA' : 'CDSCO'}</li>
-                        <li>Obtain manufacturing or import license</li>
-                    </ol>
-                </div>
             `;
 
-            container.innerHTML = html;
-        }
+                container.innerHTML = html;
 
-        function switchTab(tabName) {
-            // Hide all tabs
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
+                // Show relevant classification guide
+                document.getElementById('classificationGuide').classList.remove('hidden');
 
-            // Show selected tab
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
+                // Hide all class details first
+                ['classA', 'classB', 'classC', 'classD'].forEach(id => {
+                    document.getElementById(id).classList.add('hidden');
+                    document.getElementById(id).style.display = 'none'; // Ensure hidden
+                });
 
-        function clearForm() {
-            document.getElementById('deviceName').value = '';
-            document.getElementById('deviceType').value = '';
-            document.getElementById('deviceFunction').value = '';
-            document.getElementById('riskFactors').value = '';
-            document.getElementById('resultsContainer').innerHTML = `
-                <div class="no-results">
-                    <p>Enter device information and click "Analyze Device" to see classification and requirements</p>
-                </div>
-            `;
-        }
-
-        // Autocomplete Logic
-        const deviceInput = document.getElementById('deviceName');
-        const suggestionsList = document.getElementById('suggestions-list');
-
-        deviceInput.addEventListener('input', function () {
-            const query = this.value.toLowerCase().trim();
-            if (query.length < 3) {
-                suggestionsList.style.display = 'none';
-                return;
-            }
-
-            if (typeof extractedDeviceDatabase === 'undefined') return;
-
-            const matches = [];
-            let count = 0;
-            const maxResults = 15;
-
-            // Search in extracted DB
-            for (const key in extractedDeviceDatabase) {
-                if (key.includes(query)) {
-                    matches.push(extractedDeviceDatabase[key]);
-                    count++;
-                    if (count >= maxResults) break;
+                // Show the specific one
+                const guideId = 'class' + result.class;
+                const guideEl = document.getElementById(guideId);
+                if (guideEl) {
+                    guideEl.classList.remove('hidden');
+                    guideEl.style.display = 'block';
                 }
+
+                // Scroll results into view smoothly
+                container.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
 
-            if (matches.length > 0) {
-                const html = matches.map(item => {
-                    // Escape quotes in name for the onclick handler
-                    const safeName = item.originalName.replace(/'/g, "\\'");
-                    return `
+            function clearForm() {
+                document.getElementById('deviceName').value = '';
+                document.getElementById('deviceFunction').value = '';
+                document.getElementById('resultsContainer').innerHTML = '';
+                document.getElementById('classificationGuide').classList.add('hidden');
+
+                // Reset device list
+                const deviceList = document.getElementById('deviceList');
+                deviceList.innerHTML = `
+                    <div class="no-results">
+                        <p>Type in "Device Name" to see similar devices here.</p>
+                    </div>
+                `;
+            }
+
+            // Search/Suggestion Logic
+            const deviceInput = document.getElementById('deviceName');
+            const deviceList = document.getElementById('deviceList');
+
+            deviceInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase().trim();
+
+                if (query.length < 2) { // Allow shorter queries since we have a dedicated panel
+                    deviceList.innerHTML = `
+                    <div class="no-results">
+                        <p>Type in "Device Name" to see similar devices here.</p>
+                    </div>`;
+                    return;
+                }
+
+                if (typeof extractedDeviceDatabase === 'undefined') return;
+
+                const matches = [];
+                let count = 0;
+                const maxResults = 50; // We can show more since it is scrollable
+
+                // Search in extracted DB
+                for (const key in extractedDeviceDatabase) {
+                    if (key.includes(query)) {
+                        matches.push(extractedDeviceDatabase[key]);
+                        count++;
+                        if (count >= maxResults) break;
+                    }
+                }
+
+                if (matches.length > 0) {
+                    const html = matches.map(item => {
+                        // Escape quotes in name for the onclick handler
+                        const safeName = item.originalName.replace(/'/g, "\\'");
+                        const safeNameQuote = item.originalName.replace(/"/g, "&quot;");
+                        return `
                     <div class="suggestion-item" onclick="selectDevice('${safeName}')">
-                        <span class="suggestion-name" title="${safeName}">${item.originalName}</span>
+                        <span class="suggestion-name" title="${safeNameQuote}">${item.originalName}</span>
                         <span class="suggestion-class">Class ${item.class}</span>
                     </div>
                     `;
-                }).join('');
-                suggestionsList.innerHTML = html;
-                suggestionsList.style.display = 'block';
-            } else {
-                suggestionsList.style.display = 'none';
-            }
-        });
+                    }).join('');
+                    deviceList.innerHTML = html;
+                } else {
+                    deviceList.innerHTML = `
+                    <div class="no-results">
+                        <p>No matching devices found in database.</p>
+                    </div>`;
+                }
+            });
 
-        function selectDevice(name) {
-            deviceInput.value = name;
-            suggestionsList.style.display = 'none';
-        }
-
-        // Close suggestions on click outside
-        document.addEventListener('click', function (e) {
-            if (!deviceInput.contains(e.target) && !suggestionsList.contains(e.target)) {
-                suggestionsList.style.display = 'none';
+            function selectDevice(name) {
+                deviceInput.value = name;
+                // Auto analyze when selected from list
+                analyzeDevice();
             }
-        });
-    </script>
+        </script>
 </body>
 
 </html>

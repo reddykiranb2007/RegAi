@@ -4,11 +4,11 @@ import os
 import re
 
 files_config = [
-    {'path': 'd:/RegAi/IVD md - Medical Devices (1).xlsx', 'type': 'IVD'},
-    {'path': 'd:/RegAi/MD - Medical Devices.xlsx', 'type': 'Medical Device'},
+    # {'path': 'd:/RegAi/IVD md - Medical Devices (1).xlsx', 'type': 'IVD'},
+    # {'path': 'd:/RegAi/MD - Medical Devices.xlsx', 'type': 'Medical Device'},
     {'path': 'd:/RegAi/classification_of_medical_devices.xlsx', 'type': 'Medical Device'},
-    {'path': 'd:/RegAi/import - IVD Devices (1).xlsx', 'type': 'IVD'},
-    {'path': 'd:/RegAi/import - Medical Devices.xlsx', 'type': 'Medical Device'}
+    # {'path': 'd:/RegAi/import - IVD Devices (1).xlsx', 'type': 'IVD'},
+    # {'path': 'd:/RegAi/import - Medical Devices.xlsx', 'type': 'Medical Device'}
 ]
 
 all_devices = {}
@@ -60,7 +60,8 @@ for config in files_config:
         for _, row in df.iterrows():
             name_raw = row[name_col]
             if pd.isna(name_raw): continue
-            name = str(name_raw).strip()
+            name = str(name_raw).strip().replace('\n', ' ')
+            name = re.sub(r'\s+', ' ', name) # collapse multiple spaces
             # Remove numbering if present (e.g., "1. DeviceName")
             name = re.sub(r'^\d+\.?\s*', '', name)
             

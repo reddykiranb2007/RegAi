@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding Generator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        #status {
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        #log {
+            white-space: pre-wrap;
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Device Embedding Generator</h1>
+    <p>This tool generates the AI embeddings for your device database. It runs locally in your browser.</p>
+
+    <div id="status">Initializing...</div>
+    <button id="downloadBtn" disabled>Download device_data_embedded.js</button>
+
+    <h3>Log</h3>
+    <div id="log"></div>
+
+    <!-- Load Data -->
+    <script src="device_data.js"></script>
+
+    <!-- Load Transformers -->
+    <script type="module">
+        import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.14.0';
+
+        // Skip local model check since we are using CDN
+        env.allowLocalModels = false;
+        env.useBrowserCache = true;
+
+        const statusEl = document.getElementById('status');
+        const logEl = document.getElementById('log');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        function log(msg) {
+            logEl.textContent += msg + '\n';
+            logEl.scrollTop = logEl.scrollHeight;
+            console.log(msg);
+        }
+
+        async function main() {
+            try {
+                log("Loading Model 'Xenova/all-MiniLM-L6-v2'...");
+                statusEl.textContent = "Loading Model (this may take a moment)...";
+
+                // Load pipeline
+                const extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+
+                log("Model Loaded.");
+                statusEl.textContent = "Processing Data...";
+
+                // Process Data
+                if (typeof extractedDeviceDatabase === 'undefined') {
+                    throw new Error("device_data.js not loaded or variable name changed.");
+                }
+
+                const dataObj = extractedDeviceDatabase;
+                const outputArray = [];
+                const keys = Object.keys(dataObj);
+                const total = keys.length;
+
+                log(`Found ${total} items.`);
+
+                for (let i = 0; i < total; i++) {
+                    const key = keys[i];
+                    const item = dataObj[key];
+
+                    const name = item.originalName || "";
+                    const use = item.use || "";
+
+                    // Normalize
+                    const textToEmbed = (name + " " + use).toLowerCase().replace(/\s+/g, ' ').trim();
+
+                    if (!textToEmbed) {
+                        log(`Skipping empty item: ${key}`);
+                        continue;
+                    }
+
+                    // Embed
+                    const output = await extractor(textToEmbed, { pooling: 'mean', normalize: true });
+                    const embedding = Array.from(output.data);
+
+                    // NaN Check
+                    if (embedding.some(isNaN)) {
+                        log(`Warning: NaN found for ${key}. Skipping.`);
+                        continue;
+                    }
+
+                    // Create new item
+                    outputArray.push({
+                        ...item,
+                        embedding: embedding
+                    });
+
+                    if ((i + 1) % 10 === 0) {
+                        statusEl.textContent = `Processing: ${i + 1} / ${total}`;
+                        // Yield to UI
+                        await new Promise(r => setTimeout(r, 0));
+                    }
+                }
+
+                log(`Finished! Generated ${outputArray.length} embeddings.`);
+                statusEl.textContent = "Done! Ready to download.";
+
+                // Prepare Download
+                const jsonContent = JSON.stringify(outputArray);
+                const fileContent = `const extractedDeviceDatabase = ${jsonContent};`;
+                const blob = new Blob([fileContent], { type: 'text/javascript' });
+                const url = URL.createObjectURL(blob);
+
+                downloadBtn.onclick = () => {
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'device_data_embedded.js';
+                    a.click();
+                };
+                downloadBtn.disabled = false;
+                downloadBtn.style.background = '#28a745';
+                downloadBtn.style.color = 'white';
+
+            } catch (err) {
+                log("ERROR: " + err.message);
+                statusEl.textContent = "Error occurred.";
+                statusEl.style.color = "red";
+            }
+        }
+
+        main();
+    </script>
+</body>
+
+</html>
