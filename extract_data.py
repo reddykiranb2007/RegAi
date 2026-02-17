@@ -4,12 +4,19 @@ import os
 import re
 
 files_config = [
-    # {'path': 'd:/RegAi/IVD md - Medical Devices (1).xlsx', 'type': 'IVD'},
-    # {'path': 'd:/RegAi/MD - Medical Devices.xlsx', 'type': 'Medical Device'},
-    {'path': 'd:/RegAi/classification_of_medical_devices.xlsx', 'type': 'Medical Device'},
-    # {'path': 'd:/RegAi/import - IVD Devices (1).xlsx', 'type': 'IVD'},
-    # {'path': 'd:/RegAi/import - Medical Devices.xlsx', 'type': 'Medical Device'}
+    # {'path': 'd:/RegAi/cdsco/IVD md - Medical Devices (1).xlsx', 'type': 'IVD'},
+    # {'path': 'd:/RegAi/cdsco/MD - Medical Devices.xlsx', 'type': 'Medical Device'},
+    {'path': 'd:/RegAi/cdsco/classification_of_medical_devices.xlsx', 'type': 'Medical Device'},
+    # {'path': 'd:/RegAi/cdsco/import - IVD Devices (1).xlsx', 'type': 'IVD'},
+    # {'path': 'd:/RegAi/cdsco/import - Medical Devices.xlsx', 'type': 'Medical Device'}
 ]
+# ... (rest of code logic remains same, but we jump to the output path)
+
+# NOTE: The replace_file_content tool replaces a contiguous block. 
+# I will replace the entire file content or use multi_replace if the chunks are far apart. 
+# They are far apart (Lines 6 and 110). I should use multi_replace instead. 
+# Re-submitting as multi_replace.
+
 
 all_devices = {}
 
@@ -107,7 +114,7 @@ print(f"\nTotal unique devices extracted: {len(all_devices)}")
 
 js_content = f"const extractedDeviceDatabase = {json.dumps(all_devices, indent=2)};"
 
-output_path = 'd:/RegAi/device_data.js'
+output_path = 'd:/RegAi/cdsco/device_data.js'
 with open(output_path, 'w', encoding='utf-8') as f:
     f.write(js_content)
 

@@ -292,7 +292,7 @@
             <!-- Analysis Results will be injected here -->
             <div id="resultsContainer"></div>
 
-            <h2 style="margin-top: var(--space-24); color: var(--color-teal-606);">Classification Guide</h2>
+            <h2 style="margin-top: var(--space-24); color: var(--color-teal-600);">Classification Guide</h2>
 
             <div id="classificationGuide" class="hidden" style="margin-top: var(--space-16);">
 
@@ -347,7 +347,7 @@
 
                 <div id="classC" class="tab-content hidden">
                     <div class="class-description">
-                        <h3 style="margin-top: 0; color: var(--color-teal-606);">Class C - Moderate-High Risk</h3>
+                        <h3 style="margin-top: 0; color: var(--color-teal-600);">Class C - Moderate-High Risk</h3>
                         <p><strong>Risk Level:</strong> Significant potential harm; strict controls required</p>
                         <p><strong>Regulatory Authority:</strong> Central Licensing Authority (CDSCO)</p>
                     </div>
@@ -374,7 +374,7 @@
 
                 <div id="classD" class="tab-content hidden">
                     <div class="class-description">
-                        <h3 style="margin-top: 0; color: var(--color-teal-606);">Class D - High Risk</h3>
+                        <h3 style="margin-top: 0; color: var(--color-teal-600);">Class D - High Risk</h3>
                         <p><strong>Risk Level:</strong> Highest potential harm; strictest controls</p>
                         <p><strong>Regulatory Authority:</strong> Central Licensing Authority (CDSCO)</p>
                     </div>
@@ -400,15 +400,15 @@
             </div>
         </div>
 
-        <script src="device_data_embedded.js"></script>
+        <script src="device_data.js"></script>
         <script type="module">
-            import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.14.0';
+            // import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.14.0';
 
             // Allow local models? No, using CDN for model weights too to start, 
             // but plan said precompute. Actually, transformers.js running in browser NEEDS the model weights.
             // It will download them to cache.
-            env.allowLocalModels = false;
-            env.useBrowserCache = true;
+            // env.allowLocalModels = false;
+            // env.useBrowserCache = true;
 
             const deviceDatabase = {
                 // Medical Devices
@@ -580,20 +580,20 @@
                 const reqs = classRequirements[result.class];
 
                 let html = `
-                <div class="result-card">
-                    <h3 style="color: var(--color-teal-600);">Analysis Result</h3>
-                    <p><strong>Device:</strong> ${matchedKey || deviceName || 'User-described device'}</p>
-                    <p><strong>Type:</strong> ${result.type}</p>
-                    <p><strong>Category:</strong> ${result.ivd ? 'In Vitro Diagnostic (IVD)' : 'Medical Device'}</p>
-                    <span class="class-badge class-${result.class.toLowerCase()}">CDSCO Class ${result.class}</span>
-                    
-                    <div style="margin-top: var(--space-16); padding-top: var(--space-16); border-top: 1px solid #e0e0e0;">
-                        <p><strong>Regulatory Authority:</strong> ${reqs.authority}</p>
-                        <p><strong>License Type:</strong> ${reqs.license}</p>
-                        <p><strong>Estimated Timeframe:</strong> ${reqs.timeframe}</p>
-                    </div>
+            <div class="result-card">
+                <h3 style="color: var(--color-teal-600);">Analysis Result</h3>
+                <p><strong>Device:</strong> ${matchedKey || deviceName || 'User-described device'}</p>
+                <p><strong>Type:</strong> ${result.type}</p>
+                <p><strong>Category:</strong> ${result.ivd ? 'In Vitro Diagnostic (IVD)' : 'Medical Device'}</p>
+                <span class="class-badge class-${result.class.toLowerCase()}">CDSCO Class ${result.class}</span>
+                
+                <div style="margin-top: var(--space-16); padding-top: var(--space-16); border-top: 1px solid #e0e0e0;">
+                    <p><strong>Regulatory Authority:</strong> ${reqs.authority}</p>
+                    <p><strong>License Type:</strong> ${reqs.license}</p>
+                    <p><strong>Estimated Timeframe:</strong> ${reqs.timeframe}</p>
                 </div>
-            `;
+            </div>
+        `;
 
                 container.innerHTML = html;
 
@@ -627,10 +627,10 @@
                 // Reset device list
                 const deviceList = document.getElementById('deviceList');
                 deviceList.innerHTML = `
-                    <div class="no-results">
-                        <p>Type in "Device Name" to see similar devices here.</p>
-                    </div>
-                `;
+                <div class="no-results">
+                    <p>Type in "Device Name" to see similar devices here.</p>
+                </div>
+            `;
             }
 
             // Search/Suggestion Logic
@@ -642,9 +642,9 @@
 
                 if (query.length < 2) { // Allow shorter queries since we have a dedicated panel
                     deviceList.innerHTML = `
-                    <div class="no-results">
-                        <p>Type in "Device Name" to see similar devices here.</p>
-                    </div>`;
+                <div class="no-results">
+                    <p>Type in "Device Name" to see similar devices here.</p>
+                </div>`;
                     return;
                 }
 
@@ -669,18 +669,18 @@
                         const safeName = item.originalName.replace(/'/g, "\\'");
                         const safeNameQuote = item.originalName.replace(/"/g, "&quot;");
                         return `
-                    <div class="suggestion-item" onclick="selectDevice('${safeName}')">
-                        <span class="suggestion-name" title="${safeNameQuote}">${item.originalName}</span>
-                        <span class="suggestion-class">Class ${item.class}</span>
-                    </div>
-                    `;
+                <div class="suggestion-item" onclick="selectDevice('${safeName}')">
+                    <span class="suggestion-name" title="${safeNameQuote}">${item.originalName}</span>
+                    <span class="suggestion-class">Class ${item.class}</span>
+                </div>
+                `;
                     }).join('');
                     deviceList.innerHTML = html;
                 } else {
                     deviceList.innerHTML = `
-                    <div class="no-results">
-                        <p>No matching devices found in database.</p>
-                    </div>`;
+                <div class="no-results">
+                    <p>No matching devices found in database.</p>
+                </div>`;
                 }
             });
 
@@ -689,6 +689,12 @@
                 // Auto analyze when selected from list
                 analyzeDevice();
             }
+
+            // Expose functions to global window object
+            window.analyzeDevice = analyzeDevice;
+            window.clearForm = clearForm;
+            window.selectDevice = selectDevice;
+
         </script>
 </body>
 
