@@ -1,0 +1,9 @@
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+rapidfuzz>=3.0.0
+# sentence-transformers>=2.2.2  # Uncomment for local embeddings
+# openai>=1.0.0                 # Uncomment for OpenAI embeddings
+python-multipart

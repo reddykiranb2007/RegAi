@@ -1,0 +1,179 @@
+# 03_MASTER PROCEDURES Folder Structure and Help File
+
+This document provides a hierarchical view of the folders and files within the `03_MASTER PROCEDURES` directory. 
+Use this file as a reference to locate Standard Operating Procedures (SOPs), Checklists, Logs, and Forms across the organization's core departments.
+
+- **03_MASTER PROCEDURES**
+    - **1_Design_SOP**
+        - [Design & Development Changes.docx](./03_MASTER%20PROCEDURES/1_Design_SOP/Design%20&%20Development%20Changes.docx)
+        - [Design & Development file (content sheet).doc](./03_MASTER%20PROCEDURES/1_Design_SOP/Design%20&%20Development%20file%20(content%20sheet).doc)
+        - [Design and Development Transfer.doc](./03_MASTER%20PROCEDURES/1_Design_SOP/Design%20and%20Development%20Transfer.doc)
+        - [KHPL-DND-001.doc](./03_MASTER%20PROCEDURES/1_Design_SOP/KHPL-DND-001.doc)
+    - **2_dispatch_SOP**
+        - **KHPL-DSP-001 Dispatch of finished goods**
+            - [KHPL -DSP-001-03A batch distribution record.RTF](./03_MASTER%20PROCEDURES/2_dispatch_SOP/KHPL-DSP-001%20Dispatch%20of%20finished%20goods/KHPL%20-DSP-001-03A%20batch%20distribution%20record.RTF)
+            - [KHPL-DSP-001 Dispatch of finished goods.doc](./03_MASTER%20PROCEDURES/2_dispatch_SOP/KHPL-DSP-001%20Dispatch%20of%20finished%20goods/KHPL-DSP-001%20Dispatch%20of%20finished%20goods.doc)
+            - [KHPL-DSP-001-01A Challan Outward.doc](./03_MASTER%20PROCEDURES/2_dispatch_SOP/KHPL-DSP-001%20Dispatch%20of%20finished%20goods/KHPL-DSP-001-01A%20Challan%20%20Outward.doc)
+            - [KHPL-DSP-001-02A outward register.doc](./03_MASTER%20PROCEDURES/2_dispatch_SOP/KHPL-DSP-001%20Dispatch%20of%20finished%20goods/KHPL-DSP-001-02A%20outward%20register.doc)
+    - **3_Engineering_SOP**
+        - **KHPL-ENG-001 General Maintenance**
+            - **7 PMT CHECKLIST**
+                - [KHPL-PMT-001 water System.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-001%20water%20System.docx)
+                - [KHPL-PMT-002 Balance.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-002%20Balance.docx)
+                - [KHPL-PMT-003 water bath.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-003%20water%20bath.docx)
+                - [KHPL-PMT-004 Air Compressor.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-004%20Air%20Compressor.docx)
+                - [KHPL-PMT-005 LT Panel.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-005%20LT%20Panel.docx)
+                - [KHPL-PMT-006 Insecticuters.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-006%20Insecticuters.docx)
+                - [KHPL-PMT-007 - FIRE EXTINGUISHERS.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-007%20-%20%20FIRE%20EXTINGUISHERS.docx)
+                - [KHPL-PMT-008 tube lights.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-008%20tube%20lights.docx)
+                - [KHPL-PMT-009 DG Set.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-009%20DG%20Set.docx)
+                - [KHPL-PMT-010 AC.docx](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/7%20PMT%20CHECKLIST/KHPL-PMT-010%20AC.docx)
+            - [KHPL-ENG-001 SOP for general breakdown maintenance.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/KHPL-ENG-001%20%20SOP%20for%20general%20breakdown%20maintenance.doc)
+            - [KHPL-ENG-001-01A PM schedule for PM.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/KHPL-ENG-001-01A%20PM%20schedule%20for%20%20PM.doc)
+            - [KHPL-ENG-001-02A BREAK DOWN.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/KHPL-ENG-001-02A%20%20BREAK%20DOWN.doc)
+            - [KHPL-ENG-001-03A Maintenance History card.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/KHPL-ENG-001-03A%20%20Maintenance%20History%20card.doc)
+            - [KHPL-ENG-001-04A Maintenance Log Book.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/KHPL-ENG-001-04A%20%20Maintenance%20Log%20Book.doc)
+            - [KHPL-ENG-001-05A Checklist for Preventive maintenance.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/KHPL-ENG-001-05A%20%20%20Checklist%20for%20Preventive%20maintenance.doc)
+            - [KHPL-ENG-001-06A form 06 issuance record of Spare parts.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/KHPL-ENG-001-06A%20%20%20form%2006%20issuance%20record%20of%20Spare%20parts.doc)
+            - [KHPL-ENG-001-08A List of fire extinguisher.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-001%20General%20Maintenance/KHPL-ENG-001-08A%20List%20of%20fire%20extinguisher.doc)
+        - **KHPL-ENG-002 Monitroing & measuring device**
+            - [KHPL-ENG-002 Monitoring & measuring device.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-002%20Monitroing%20&%20measuring%20device/KHPL-ENG-002%20%20Monitoring%20&%20measuring%20device.doc)
+            - [KHPL-ENG-002-01A List of MMD.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-002%20Monitroing%20&%20measuring%20device/KHPL-ENG-002-01A%20%20List%20of%20MMD.doc)
+            - [KHPL-ENG-002-02A history card.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-002%20Monitroing%20&%20measuring%20device/KHPL-ENG-002-02A%20%20history%20card.doc)
+            - [KHPL-ENG-002-03A Notice of event.doc](./03_MASTER%20PROCEDURES/3_Engineering_SOP/KHPL-ENG-002%20Monitroing%20&%20measuring%20device/KHPL-ENG-002-03A%20%20Notice%20of%20event.doc)
+    - **4_HRA_SOP**
+        - **KHPL-HRD-001 Emloyee Training**
+        - **KHPL-HRD-002 Gowning procedure and Personal hygiene**
+        - **KHPL-HRD-003 Pest & Rodent Control**
+        - **KHPL-HRD-004 General Plant manitenance and upkeep**
+        - **KHPL-HRD-005 Cleaning SOP**
+        - **KHPL-HRD-006 Medical Health Check Up**
+    - **5_Marketing_SOP**
+        - **KHPL-MKT-001 Contract review**
+    - **6_Production SOP**
+        - **KHPL -PRD-001 Execution of orders & production Planning**
+        - **KHPL-PRD-002 Transfer of Finish good to FGS**
+        - **KHPL-PRD-003 Transfer of rejected material**
+    - **7_Purchase_SOP**
+        - **KHPL-PUR-001 Purchase**
+    - **8_QA_SOP**
+        - **KHPL-QAS-001 SOP ON SOP**
+        - **KHPL-QAS-002 Document and data cotrol**
+        - **KHPL-QAS-003 self inspection & quality audit**
+        - **KHPL-QAS-004 Management review**
+        - **KHPL-QAS-005 Release of final product**
+        - **KHPL-QAS-006 Labelling requiremenent**
+        - **KHPL-QAS-007 Vendor Audit & Qualification**
+        - **KHPL-QAS-008 Customer satisfaction**
+        - **KHPL-QAS-009 Handling of market complaint**
+        - **KHPL-QAS-010 Handling and documentation of non-conforming product**
+        - **KHPL-QAS-011 Corrective and preventive action**
+        - **KHPL-QAS-012 Procedure for Change control**
+        - **KHPL-QAS-013 Handling devitaion**
+        - **KHPL-QAS-014 Product Recall**
+            - [KHPL-QAS-014 Product Recall.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-014%20Product%20Recall/KHPL-QAS-014%20Product%20Recall.doc)
+            - [KHPL-QAS-014-01A.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-014%20Product%20Recall/KHPL-QAS-014-01A.doc)
+            - [KHPL-QAS-014-02A.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-014%20Product%20Recall/KHPL-QAS-014-02A.doc)
+            - [KHPL-QAS-014-03A.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-014%20Product%20Recall/KHPL-QAS-014-03A.doc)
+            - [KHPL-QAS-014-04A.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-014%20Product%20Recall/KHPL-QAS-014-04A.doc)
+        - **KHPL-QAS-015 Handling of material**
+            - [Intimation-cum Inspection record (for Raw materials.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-015%20Handling%20of%20material/Intimation-cum%20Inspection%20record%20(for%20Raw%20materials.doc)
+            - [KHPL-QAS-015 Material handling.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-015%20Handling%20of%20material/KHPL-QAS-015%20Material%20handling.doc)
+            - [KHPL-QAS-015-02A Inter Department Challan.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-015%20Handling%20of%20material/KHPL-QAS-015-02A%20Inter%20Department%20Challan.doc)
+            - [KHPL-QAS-015-03A-Requisition Slip.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-015%20Handling%20of%20material/KHPL-QAS-015-03A-Requisition%20Slip.doc)
+        - **KHPL-QAS-016 BMR & Batch Numbering System**
+            - [KHPL-QAS-016 BMR & Batch Numbering System.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-016%20BMR%20&%20Batch%20Numbering%20System/KHPL-QAS-016%20BMR%20&%20Batch%20Numbering%20System.doc)
+            - [KHPL-QAS-016-01 Batch intimation.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-016%20BMR%20&%20Batch%20Numbering%20System/KHPL-QAS-016-01%20Batch%20intimation.doc)
+            - [KHPL-QAS-016-02 Batch Log.xlsx](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-016%20BMR%20&%20Batch%20Numbering%20System/KHPL-QAS-016-02%20Batch%20Log.xlsx)
+            - [KHPL-QAS-016-03 BMR final.docx](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-016%20BMR%20&%20Batch%20Numbering%20System/KHPL-QAS-016-03%20BMR%20final.docx)
+            - [KHPL-QAS-016-04 Inter Department Challan.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-016%20BMR%20&%20Batch%20Numbering%20System/KHPL-QAS-016-04%20Inter%20Department%20Challan.doc)
+        - **KHPL-QAS-017 Identification and traceability**
+            - [GMEL-QAS-017-01.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-01.doc)
+            - [GMEL-QAS-017-02.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-02.doc)
+            - [GMEL-QAS-017-03.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-03.doc)
+            - [GMEL-QAS-017-04.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-04.doc)
+            - [GMEL-QAS-017-05.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-05.doc)
+            - [GMEL-QAS-017-06.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-06.doc)
+            - [GMEL-QAS-017-07.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-07.doc)
+            - [GMEL-QAS-017-08.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-08.doc)
+            - [GMEL-QAS-017-09.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-09.doc)
+            - [GMEL-QAS-017-10.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-10.doc)
+            - [GMEL-QAS-017-11.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-11.doc)
+            - [GMEL-QAS-017-12.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-12.doc)
+            - [GMEL-QAS-017-13.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-13.doc)
+            - [GMEL-QAS-017-14.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-14.doc)
+            - [GMEL-QAS-017-15.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/GMEL-QAS-017-15.doc)
+            - [Identification and traceability.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-017%20Identification%20and%20traceability/Identification%20and%20traceability.doc)
+        - **KHPL-QAS-018 Vigiliance procedure**
+            - [KHPL-QAS-018 NEW vigilance procedure.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-018%20Vigiliance%20procedure/KHPL-QAS-018%20%20NEW%20vigilance%20procedure.doc)
+        - **KHPL-QAS-019 Advisory Notice**
+            - [KHPL-QAS-019 advisory Notice.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-019%20Advisory%20Notice/KHPL-QAS-019%20%20advisory%20Notice.doc)
+        - **KHPL-QAS-020 Contract Outsource Service**
+            - [KHPL-QAS-020 Contract Outsource Services.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-020%20Contract%20Outsource%20Service/KHPL-QAS-020%20Contract%20Outsource%20Services.doc)
+            - [KHPL-QAS-020-01 checklist for services.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-020%20Contract%20Outsource%20Service/KHPL-QAS-020-01%20checklist%20for%20services.doc)
+        - **KHPL-QAS-021 literature search clinical evaluation**
+            - [literature search clinical evaluation.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-021%20literature%20search%20clinical%20evaluation/literature%20search%20clinical%20evaluation.doc)
+        - **KHPL-QAS-022 Risk analysis**
+            - [KHPL-QAS-022 Risk Analysis.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-022%20Risk%20analysis/KHPL-QAS-022%20Risk%20Analysis.doc)
+        - **KHPL-QAS-023 Maintenance of loog book**
+            - [KHPL-QAS-023-01 Logbook form.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-023%20Maintenance%20of%20loog%20book/KHPL-QAS-023-01%20%20Logbook%20form.doc)
+            - [KHPL-QAS-O23 Maintenance of log book.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-023%20Maintenance%20of%20loog%20book/KHPL-QAS-O23%20Maintenance%20of%20log%20book.doc)
+        - **KHPL-QAS-024 Artwork control**
+            - [KHPL-QAS-024 control of artwork.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-024%20Artwork%20control/KHPL-QAS-024%20control%20of%20artwork.doc)
+            - [KHPL-QAS-024-1 initaion form.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-024%20Artwork%20control/KHPL-QAS-024-1%20initaion%20form.doc)
+            - [KHPL-QAS-024-2 packaging approval.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-024%20Artwork%20control/KHPL-QAS-024-2%20packaging%20approval.doc)
+            - [KHPL-QAS-024-3 artwork register.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-024%20Artwork%20control/KHPL-QAS-024-3%20artwork%20register.doc)
+            - [KHPL-QAS-024-4 history card.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-024%20Artwork%20control/KHPL-QAS-024-4%20history%20card.doc)
+        - **KHPL-QAS-025 Clinical study**
+            - [KHPL-QAS-025 competence for clinical (1).doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-025%20Clinical%20study/KHPL-QAS-025%20%20competence%20for%20clinical%20%20(1).doc)
+            - [KHPL-QAS-025-01A Process flow.docx](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-025%20Clinical%20study/KHPL-QAS-025-01A%20%20Process%20flow.docx)
+            - [KHPL-QAS-025-01A Clinical report.docx](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-025%20Clinical%20study/KHPL-QAS-025-01A%20Clinical%20report.docx)
+        - **KHPL-QAS-026 PMCF**
+            - [KHPL-QAS-026 PMCF.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-026%20PMCF/KHPL-QAS-026%20PMCF.doc)
+        - **KHPL-QAS-027 External Regulatory Audit_Inspection**
+            - [External Regulatory Audit_Inspection.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-027%20External%20Regulatory%20Audit_Inspection/External%20Regulatory%20Audit_Inspection.doc)
+        - **KHPL-QAS-028 PMS**
+            - [KHPL-QAS-028 post market survulliance.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-028%20PMS/KHPL-QAS-028%20post%20market%20survulliance.doc)
+        - **KHPL-QAS-029 IPQA**
+            - [KHPL-QAS-029 SOP for IPQA.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-029%20IPQA/KHPL-QAS-029%20SOP%20for%20IPQA.doc)
+            - [KHPL-QAS-029-01A For Manufacturing Process sheet.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-029%20IPQA/KHPL-QAS-029-01A%20For%20Manufacturing%20Process%20sheet.doc)
+            - [KHPL-QAS-029-02A For Finished Goods Manufacturing Record.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-029%20IPQA/KHPL-QAS-029-02A%20For%20Finished%20Goods%20Manufacturing%20Record.doc)
+            - [KHPL-QAS-029-03A For Labeling.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-029%20IPQA/KHPL-QAS-029-03A%20For%20Labeling.doc)
+        - **KHPL-QAS-030 MONITORING OF TEMPERATURE**
+            - [KHPL-QAS-030-01.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-030%20MONITORING%20OF%20TEMPERATURE/KHPL-QAS-030-01.doc)
+            - [KHPL-QAS-030-02.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-030%20MONITORING%20OF%20TEMPERATURE/KHPL-QAS-030-02.doc)
+            - [KHPL-QAS-030.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-030%20MONITORING%20OF%20TEMPERATURE/KHPL-QAS-030.doc)
+        - **KHPL-QAS-031 Servicing Procedure**
+            - [KHPL-QAS-031 Servicing Procedure.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-031%20Servicing%20Procedure/KHPL-QAS-031%20Servicing%20Procedure.doc)
+            - [KHPL-QAS-031-01 Servicing Form.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-031%20Servicing%20Procedure/KHPL-QAS-031-01%20Servicing%20Form.doc)
+        - **KHPL-QAS-032 DATA ANALYSIS**
+            - [KHPL-QAS-032 DATA ANALYSIS.docx](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-032%20DATA%20ANALYSIS/KHPL-QAS-032%20DATA%20ANALYSIS.docx)
+            - [KHPL-QAS-032-01 Analysis of Data.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-032%20DATA%20ANALYSIS/KHPL-QAS-032-01%20Analysis%20of%20Data.doc)
+        - **KHPL-QAS-033 Software Validation**
+            - [KHPL-QAS-033 Software Validation.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-033%20Software%20Validation/KHPL-QAS-033%20Software%20Validation.doc)
+        - **KHPL-QAS-034 Waste Control and Disposal**
+            - [KHPL-QAS-034 Waste Control and Disposal.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-034%20Waste%20Control%20and%20Disposal/KHPL-QAS-034%20Waste%20Control%20and%20Disposal.doc)
+            - [record of destruction 01.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-034%20Waste%20Control%20and%20Disposal/record%20of%20destruction%2001.doc)
+            - [record of rejected goods 02.doc](./03_MASTER%20PROCEDURES/8_QA_SOP/KHPL-QAS-034%20Waste%20Control%20and%20Disposal/record%20of%20rejected%20goods%2002.doc)
+    - **9_QC_SOP**
+        - **KHPL-QCD-001 Quality Control Procedure**
+            - [In-comming inspection report.doc](./03_MASTER%20PROCEDURES/9_QC_SOP/KHPL-QCD-001%20Quality%20Control%20Procedure/In-comming%20inspection%20report.doc)
+            - [KHPL-QCD-001 Quality Control Procedure.doc](./03_MASTER%20PROCEDURES/9_QC_SOP/KHPL-QCD-001%20Quality%20Control%20Procedure/KHPL-QCD-001%20Quality%20Control%20Procedure.doc)
+            - [KHPL-QCD-001-02A Plant QC AR No. Register.doc](./03_MASTER%20PROCEDURES/9_QC_SOP/KHPL-QCD-001%20Quality%20Control%20Procedure/KHPL-QCD-001-02A%20Plant%20QC%20AR%20No.%20Register.doc)
+            - [KHPL-QCD-001-04A Plant Batch Issuance FG.doc](./03_MASTER%20PROCEDURES/9_QC_SOP/KHPL-QCD-001%20Quality%20Control%20Procedure/KHPL-QCD-001-04A%20Plant%20Batch%20Issuance%20FG.doc)
+            - [KHPL-QCD-001-1A Quality Plan.docx](./03_MASTER%20PROCEDURES/9_QC_SOP/KHPL-QCD-001%20Quality%20Control%20Procedure/KHPL-QCD-001-1A%20Quality%20Plan.docx)
+        - **KHPL-QCD-002 GLP**
+            - [KHPL-QCD-002 GLP.doc](./03_MASTER%20PROCEDURES/9_QC_SOP/KHPL-QCD-002%20GLP/KHPL-QCD-002%20GLP.doc)
+    - **10_Store_SOP**
+        - **KHPL-STR-001 GSP**
+            - [KHPL-STR-001 good store practice.doc](./03_MASTER%20PROCEDURES/10_Store_SOP/KHPL-STR-001%20GSP/KHPL-STR-001%20good%20store%20practice.doc)
+        - **KHPL-STR-002 SOP of RM and PM recieving and handling**
+            - [Incoming Material Insp.doc](./03_MASTER%20PROCEDURES/10_Store_SOP/KHPL-STR-002%20SOP%20of%20RM%20and%20PM%20recieving%20and%20handling/Incoming%20Material%20Insp.doc)
+            - [Incoming material test.doc](./03_MASTER%20PROCEDURES/10_Store_SOP/KHPL-STR-002%20SOP%20of%20RM%20and%20PM%20recieving%20and%20handling/Incoming%20material%20test.doc)
+            - [Material inward.doc](./03_MASTER%20PROCEDURES/10_Store_SOP/KHPL-STR-002%20SOP%20of%20RM%20and%20PM%20recieving%20and%20handling/Material%20inward.doc)
+            - [Packing Material stock.doc](./03_MASTER%20PROCEDURES/10_Store_SOP/KHPL-STR-002%20SOP%20of%20RM%20and%20PM%20recieving%20and%20handling/Packing%20Material%20stock.doc)
+            - [Raw Material stock.doc](./03_MASTER%20PROCEDURES/10_Store_SOP/KHPL-STR-002%20SOP%20of%20RM%20and%20PM%20recieving%20and%20handling/Raw%20Material%20stock.doc)
+            - [SOP of RM and PM recieving.doc](./03_MASTER%20PROCEDURES/10_Store_SOP/KHPL-STR-002%20SOP%20of%20RM%20and%20PM%20recieving%20and%20handling/SOP%20of%20RM%20and%20PM%20recieving.doc)
+        - **KHPL-STR-003 Issuance of Raw Material input to production Department**
+            - [Issuance of Raw Material.doc](./03_MASTER%20PROCEDURES/10_Store_SOP/KHPL-STR-003%20Issuance%20of%20Raw%20Material%20input%20to%20production%20Department/Issuance%20of%20Raw%20Material.doc)
+            - [Material Slip.doc](./03_MASTER%20PROCEDURES/10_Store_SOP/KHPL-STR-003%20Issuance%20of%20Raw%20Material%20input%20to%20production%20Department/Material%20Slip.doc)
